@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guestbook Form</title>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Contact Form</h1>
+
+      <form action="">
+        <div class="grid-container">
+          <div class="grid-item">
+            <label for="fname">First Name</label><br />
+            <input type="text" id="fname" name="fname" />
+          </div>
+          <div class="grid-item">
+            <label for="lname">Last Name</label><br />
+            <input type="text" id="lname" name="lname" />
+          </div>
+          <div class="grid-item">
+            <label for="job">Job Title</label><br />
+            <input type="text" id="job" name="job" />
+          </div>
+          <div class="grid-item">
+            <label for="company">Company</label><br />
+            <input type="text" id="company" name="company" />
+          </div>
+          <div class="grid-item">
+            <label for="linkedin">LinkedIn URL</label><br />
+            <input type="text" id="linkedin" name="linkedin" />
+          </div>
+          <div class="grid-item">
+            <label for="email">Email Address</label><br />
+            <input type="email" id="email" name="email" />
+          </div>
+        </div>
+        <div class="flex-container">
+          <div class="meet">
+            <label for="meet">How did we meet?</label><br />
+            <select name="meet" id="meet">
+              <option value="volvo">Please Select</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
+          <div class="other">
+            <label for="other">Other (please specify)</label><br />
+            <input type="text" id="other" name="other" />
+          </div>
+        </div>
+        <div class="message">
+          <label for="">Message</label><br />
+          <textarea name="message" id="message" rows="8" cols="100"></textarea>
+        </div>
+        <div>
+          <input type="checkbox" name="mailing" id="mailing" /><label
+            for="mailing"
+            >Please add me to your mailing list</label
+          >
+        </div>
+        <div class="bottom">
+          <label for="format">Choose an email format:</label>
+          <input type="radio" id="html" name="format" value="html" />
+          <label for="html">HTML</label>
+          <input type="radio" id="newEmail" name="format" value="newEmail" />
+          <label for="newEmail">Email</label>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
