@@ -55,10 +55,13 @@ document.getElementById("guestbook-form").onsubmit = () => {
 };
 
 meet.addEventListener("change", () => {
+  document.getElementById("err-meet").style.display = "none";
   selectedOption = meet.options[meet.selectedIndex].text;
   console.log(selectedOption);
-  let myBool = selectedOption == "Other";
-  document.getElementById("otherDiv").style.display = myBool ? "block" : "none";
+  let optionIsValid = selectedOption == "Other";
+  document.getElementById("otherDiv").style.display = optionIsValid
+    ? "block"
+    : "none";
 });
 
 mailing.addEventListener("change", () => {
