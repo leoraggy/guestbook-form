@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/admin.css" />
+  </head>
+  <body>
+    <div class="card-container">
+      <% contacts.forEach(contact => { %>
+      <div class="card">
+        <p>Name: <%= contact.fname %> <%= contact.lname %></p>
+        <p>Job Title: <%= contact.job %></p>
+        <p>Company: <%= contact.company %></p>
+        <p>Linkedin: <%= contact.linkedin %></p>
+        <p>Email: <%= contact.email %></p>
+        <p>How we met: <%= contact.meet %></p>
+        <p>Message: <%= contact.message %></p>
+        <p>Mailing: <%= contact.mailing %></p>
+        <p>Format: <%= contact.format %></p>
+      </div>
+      <% });%>
+    </div>
+  </body>
+</html>
