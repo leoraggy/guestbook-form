@@ -23,8 +23,8 @@ app.get("/", (req, res) => {
 app.post("/submit_form", (req, res) => {
   const contact = req.body;
   contacts.push(contact);
-  // res.render("confirm");
-  res.json(contact);
+  res.render("confirm");
+  // res.json(contact);
 });
 
 app.get("/admin", (req, res) => {
