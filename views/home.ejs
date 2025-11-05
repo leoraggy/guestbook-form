@@ -3,89 +3,145 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guestbook Form</title>
-    <link rel="icon" href="images/favicon.png" />
+    <!-- StyleSheet -->
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="js/formValidation.js" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" href="images/leoragual.jpg" />
+    <title>Resume Leo Ragual</title>
   </head>
   <body>
     <main>
-      <h1>Contact Form</h1>
+      <div class="container">
+        <div class="left">
+          <h1>Leo Ragual</h1>
+          <p class="email">leoragual35@gmail.com</p>
+        </div>
 
-      <form id="guestbook-form" action="submit_form" method="post">
-        <div class="grid-container">
-          <div class="grid-item">
-            <label for="fname">First Name</label>
-            <span class="error" id="err-fname">Please input a first name!</span>
-            <input type="text" id="fname" name="fname" />
-          </div>
-          <div class="grid-item">
-            <label for="lname">Last Name</label
-            ><span class="error" id="err-lname">Please input a last name!</span>
-            <input type="text" id="lname" name="lname" />
-          </div>
-          <div class="grid-item">
-            <label for="job">Job Title</label>
-            <input type="text" id="job" name="job" />
-          </div>
-          <div class="grid-item">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company" />
-          </div>
-          <div class="grid-item">
-            <label for="linkedin">LinkedIn URL</label
-            ><span class="error" id="err-linkedin"
-              >URL must start with https://linkedin.com/in/</span
-            >
-            <input type="text" id="linkedin" name="linkedin" />
-          </div>
-          <div class="grid-item">
-            <label for="email">Email Address</label>
-            <span class="error" id="err-email"
-              >Email address must be in valid format.</span
-            >
-            <input type="email" id="email" name="email" />
-          </div>
+        <div class="right">
+          <a href="https://www.linkedin.com/in/leoragual" target="_blank"
+            ><img src="images/linkedin.png" alt="image of linkedin"
+          /></a>
+          <a href="https://github.com/leoraggy" target="_blank"
+            ><img src="images/github.png" alt="image of github"
+          /></a>
         </div>
-        <div class="flex-container">
-          <div class="meet">
-            <label for="meet">How did we meet?</label
-            ><span class="error" id="err-meet">Please specify how we met!</span>
-            <select name="meet" id="meet">
-              <option value="">Please Select</option>
-              <option value="school">School</option>
-              <option value="friend">Friend</option>
-              <option value="work">Work</option>
-              <option value="otherOption">Other</option>
-            </select>
-          </div>
-          <div class="other" id="otherDiv">
-            <label for="other">Other (please specify)</label>
-            <span class="error" id="err-other">Please specify how we met!</span>
-            <input type="text" id="other" name="other" />
-          </div>
+      </div>
+
+      <header class="header">
+        <img
+          src="images/leoragual.jpg"
+          alt="image of leo ragual"
+          id="portrait"
+        />
+
+        <div class="summarySection">
+          <h2 id="summaryTitle">Summary</h2>
+          <p id="summary">
+            Greetings, I'm Leo. A passionate programmer for 3+ years centered on
+            full-stack development. Proficient with using React framework for
+            building my projects. I enjoy learning about new technology every
+            day. My biggest strength is working alongside a team to accomplish a
+            goal.
+          </p>
         </div>
-        <div class="message">
-          <label for="">Message</label><br />
-          <textarea name="message" id="message" rows="8" cols="100"></textarea>
-        </div>
-        <div>
-          <input type="checkbox" name="mailing" id="mailing" /><label
-            for="mailing"
-            >Please add me to your mailing list</label
-          >
-        </div>
-        <div class="bottom" id="format">
-          <label for="format">Choose an email format:</label>
-          <input type="radio" id="html" name="format" value="html" />
-          <label for="html">HTML</label>
-          <input type="radio" id="newEmail" name="format" value="newEmail" />
-          <label for="newEmail">Email</label>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-      <br />
-      <a href="https://github.com/leoraggy/guestbook-form">Github Repository</a>
+      </header>
+
+      <div class="education">
+        <h2>Education</h2>
+        <p class="bold-words">
+          <span>Bachelor of Applied Science in Software Development</span>
+          <span>Expected Graduation 2027</span>
+        </p>
+        <p>Green River College</p>
+        Relevant Coursework:
+        <ul class="b">
+          <li>Systems Programming</li>
+          <li>Web Development Fundamentals</li>
+        </ul>
+        <p>Extracurriculars:</p>
+        <ul class="b">
+          <li>Board Masters</li>
+        </ul>
+
+        <p class="bold-words">
+          Associate Of Arts in Computer Science
+          <span class="date">Graduated 2025</span>
+        </p>
+        <p>
+          Renton Technical College
+          <span class="date">Vice Presidents List</span>
+        </p>
+        Relevant Coursework:
+        <ul class="b">
+          <li>Object Oriented Programming</li>
+          <li>Full Stack Development (MERN Stack)</li>
+          <li>Next.js Development</li>
+          <li>Relational Database Development (SQL)</li>
+          <li>Algorithms</li>
+        </ul>
+        <p>Extracurriculars:</p>
+        <ul class="b">
+          <li>Cybersecurity Club</li>
+          <li>Member of CITL (Center for Innovation Technology Learning)</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Skills & Certifications</h2>
+        <ul class="b">
+          <li>Languages: Java, Javascript, SQL</li>
+          <li>HTML/CSS, JSON, Express, REST API, Node.js</li>
+          <li>Frameworks: React, Next.js, React Native</li>
+          <li>Tools: Github, Git, VSCode</li>
+          <li>
+            Soft Skills: Communication, Public Speaking, Critical Thinking
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2>Work Experience</h2>
+        <p class="bold-words">
+          Freelance Mobile Developer - Remote Jan 2025 - Present
+        </p>
+        <ul class="b">
+          <li>
+            Built and maintain a daily-use mobile Bible app in Tigrinya for a
+            community of over 2 million speakers.
+          </li>
+          <li>
+            The app delivers scripture access, interactive photo gallery, and
+            offline usability, supporting everyday spiritual engagement.
+          </li>
+          <li>
+            Developed with React Native, implementing an interactive image
+            gallery, PDF renderer, and chapter selection system. Integrated
+            local storage for efficient offline access and content management.
+          </li>
+        </ul>
+        <p class="bold-words">Renton Technical College - Renton, WA</p>
+        <h4>ASG Treasurer</h4>
+        <ul class="b">
+          <li>
+            Ensured 100% accuracy in financial records for S&A fees by
+            implementing a excel form sheet to track the budget.
+          </li>
+          <li>
+            Increased student engagement by 30% within 6 months by organizing
+            interactive events and tripling the number of clubs.
+          </li>
+          <li>
+            Mentored python workshops to 20+ people students of different
+            levels, teaching them the fundamentals and giving practice problems
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2>Achievements and Activities</h2>
+        <ul class="b">
+          <li>Phi Theta Kappa - All-Washington Academic Team, 2025</li>
+          <li>Hosted Mentor Mesh Tech Meetup - 2025</li>
+          <li>3rd place in HackTheBox Cypher Siege Event</li>
+        </ul>
+      </div>
     </main>
   </body>
 </html>

@@ -20,11 +20,14 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
+app.get("/", (req, res) => {
+  res.render("form");
+});
+
 app.post("/submit_form", (req, res) => {
   const contact = req.body;
   contacts.push(contact);
   res.render("confirm");
-  // res.json(contact);
 });
 
 app.get("/admin", (req, res) => {
