@@ -1,6 +1,8 @@
 body {
   font-family: sans-serif;
   background-color: rgb(176, 174, 174);
+  margin: 0;
+  padding: 0;
 }
 
 main {
@@ -9,6 +11,8 @@ main {
   width: 60%;
   justify-content: center;
   padding: 1rem;
+  border: 1px solid #3d444d;
+  border-radius: 5px;
 }
 
 h1 {

@@ -1,0 +1,27 @@
+.topNavBar {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+
+.flex-item1 {
+  display: flex;
+  align-items: center;
+  font-size: x-large;
+  color: black;
+  gap: 10px;
+  padding: 0.5rem;
+}
+
+a:visited {
+  color: black;
+}
+
+.flex-item2 {
+  margin-right: 1rem;
+}
+
+a {
+  text-decoration: none;
+}

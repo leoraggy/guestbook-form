@@ -1,13 +1,28 @@
+body {
+  background-color: var(--primary-bg-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  margin: 0;
+  padding: 0;
+}
 h1 {
   text-align: center;
 }
+main {
+  margin: auto;
+  background-color: white;
+  width: 60%;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid #3d444d;
+  border-radius: 5px;
+}
 
-a {
+.form-button {
   display: flex;
   justify-self: center;
   border: 1px solid black;
   border-radius: 15px;
   padding: 1rem;
   text-decoration: none;
-  
 }
