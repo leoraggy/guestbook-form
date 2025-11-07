@@ -11,6 +11,18 @@
     <%- include('partials/header') %>
     <main>
       <h1>Your form has successfully been submitted!</h1>
+      <div class="card">
+        <p>Name: <%= contact.fname %> <%= contact.lname %></p>
+        <p>Job Title: <%= contact.job %></p>
+        <p>Company: <%= contact.company %></p>
+        <p>Linkedin: <%= contact.linkedin %></p>
+        <p>Email: <%= contact.email %></p>
+        <p>Date Sent: <%= contact.timeSubmitted %></p>
+        <p>How we met: <%= contact.meet %></p>
+        <p>Message: <%= contact.message %></p>
+        <p>Mailing: <%= contact.mailing %></p>
+        <p>Format: <%= contact.format %></p>
+      </div>
       <a class="form-button" href="/">Go send another form</a>
     </main>
   </body>

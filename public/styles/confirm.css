@@ -26,3 +26,10 @@ main {
   padding: 1rem;
   text-decoration: none;
 }
+
+.card {
+  padding: 2rem;
+  border: 2px solid black;
+  border-radius: 25px;
+  margin: 1rem;
+}

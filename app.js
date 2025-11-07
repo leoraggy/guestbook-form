@@ -32,7 +32,7 @@ app.post("/submit_form", (req, res) => {
   const contact = req.body;
   contact.timeSubmitted = new Date().toLocaleDateString();
   contacts.push(contact);
-  res.render("confirm");
+  res.render("confirm", { contact });
 });
 
 app.listen(PORT, () => {
