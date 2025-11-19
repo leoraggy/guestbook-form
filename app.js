@@ -1,4 +1,18 @@
 import express from "express";
+import mysql2 from "mysql2";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const pool = mysql2
+  .createPool({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT,
+  })
+  .promise();
 
 const app = express();
 
@@ -24,15 +38,62 @@ app.get("/form", (req, res) => {
   res.render("form");
 });
 
-app.get("/admin", (req, res) => {
-  res.render("admin", { contacts });
+app.get("/admin", async (req, res) => {
+  try {
+    const [contacts] = await pool.query("SELECT * FROM contacts");
+    res.render("admin", { contacts });
+  } catch (error) {
+    console.error("Database Error:", error);
+    res.status(500).send("Database error" + error.message);
+  }
 });
 
-app.post("/submit_form", (req, res) => {
-  const contact = req.body;
-  contact.timeSubmitted = new Date().toLocaleDateString();
-  contacts.push(contact);
-  res.render("confirm", { contact });
+app.get("/db-test", async (req, res) => {
+  try {
+    const [contacts] = await pool.query("SELECT * FROM contacts");
+
+    res.send(contacts);
+  } catch (error) {
+    console.error("Database error:", error);
+  }
+});
+
+app.post("/submit_form", async (req, res) => {
+  try {
+    const contact = req.body;
+    contact.timeSubmitted = new Date();
+    console.log(contact);
+
+    const sql = `INSERT INTO contacts(fname, lname, job, company, linkedin, email, meet, message, mailing, format,timeSubmitted)
+    VALUES(?,?,?,?,?,?,?,?,?,?,?)`;
+
+    const contact1 = {
+      fname: contact.fname,
+      lname: contact.lname,
+      job: contact.job,
+      company: contact.company,
+      linkedin: contact.linkedin,
+      email: contact.email,
+      meet: contact.meet !== "otherOption" ? contact.meet : contact.other,
+      message: contact.message,
+      mailing: contact.mailing,
+      fortmat: contact.format,
+      timeSubmitted: contact.timeSubmitted,
+    };
+
+    const params = Object.values(contact1);
+
+    const [result] = await pool.execute(sql, params);
+    console.log("Contact saved with ID:", result.insertId);
+    res.render("confirm", { contact });
+  } catch (error) {
+    console.error("Error saving contact:", error);
+    res
+      .status(500)
+      .send(
+        "Sorry, there was an error processing your contact. Please try again"
+      );
+  }
 });
 
 app.listen(PORT, () => {

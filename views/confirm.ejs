@@ -18,7 +18,10 @@
         <p>Linkedin: <%= contact.linkedin %></p>
         <p>Email: <%= contact.email %></p>
         <p>Date Sent: <%= contact.timeSubmitted %></p>
-        <p>How we met: <%= contact.meet %></p>
+        <p>
+          How we met: <%= contact.meet !== "otherOption" ? contact.meet :
+          contact.other %>
+        </p>
         <p>Message: <%= contact.message %></p>
         <p>Mailing: <%= contact.mailing %></p>
         <p>Format: <%= contact.format %></p>

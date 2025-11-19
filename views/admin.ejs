@@ -13,9 +13,7 @@
       <h1>Admin Page</h1>
       <div class="card-container">
         <% if(contacts.length == 0){ %>
-        <div>
-          <h3>No Contacts found</h3>
-        </div>
+        <h3>No Contacts found</h3>
         <% }else{ %> <% contacts.forEach(contact => { %>
         <div class="card">
           <p>Name: <%= contact.fname %> <%= contact.lname %></p>
