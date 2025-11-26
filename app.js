@@ -26,8 +26,6 @@ app.use(express.static("public"));
 // allows the app to parse form data (req.body)
 app.use(express.urlencoded({ extended: true }));
 
-const contacts = [];
-
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
@@ -70,15 +68,16 @@ app.post("/submit_form", async (req, res) => {
     const contact1 = {
       fname: contact.fname,
       lname: contact.lname,
-      job: contact.job,
-      company: contact.company,
-      linkedin: contact.linkedin,
-      email: contact.email,
-      meet: contact.meet !== "otherOption" ? contact.meet : contact.other,
-      message: contact.message,
-      mailing: contact.mailing,
-      fortmat: contact.format,
-      timeSubmitted: contact.timeSubmitted,
+      job: contact.job || null,
+      company: contact.company || null,
+      linkedin: contact.linkedin || null,
+      email: contact.email || null,
+      meet:
+        contact.meet !== "otherOption" ? contact.meet : contact.other || null,
+      message: contact.message || null,
+      mailing: contact.mailing || null,
+      fortmat: contact.format || null,
+      timeSubmitted: contact.timeSubmitted || null,
     };
 
     const params = Object.values(contact1);

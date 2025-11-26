@@ -7,7 +7,7 @@ document.getElementById("guestbook-form").onsubmit = () => {
   removeErrors();
 
   let isValid = true;
-  const emailRegex = /^[^s@]+@[^s@]+.[^s@]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   let fname = document.getElementById("fname").value.trim();
   let lname = document.getElementById("lname").value.trim();
   let email = document.getElementById("email").value.trim();

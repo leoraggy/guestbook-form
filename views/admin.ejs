@@ -21,7 +21,7 @@
           <p>Company: <%= contact.company %></p>
           <p>Linkedin: <%= contact.linkedin %></p>
           <p>Email: <%= contact.email %></p>
-          <p>Date Sent: <%= contact.timeSubmitted %></p>
+          <p>Date Sent: <%= contact.timeSubmitted.toLocaleDateString() %></p>
           <p>How we met: <%= contact.meet %></p>
           <p>Message: <%= contact.message %></p>
           <p>Mailing: <%= contact.mailing %></p>
